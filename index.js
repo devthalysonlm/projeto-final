@@ -13,3 +13,13 @@ const jwt = new JWT({
     scopes: SCOPES,
 })
 
+async function GetDoc() {
+    const doc = new GoogleSpreadsheet('1B_aNW3fc0jf5e5R79-EeBCmPTLey_iK_77rUyfA5zh4', jwt);
+    await doc.loadInfo();
+    return doc;
+}
+
+
+    
+
+
